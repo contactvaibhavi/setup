@@ -1,3 +1,4 @@
+export CDPATH=".:$HOME/gitCode:$HOME"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -127,3 +128,5 @@ eval "$(pyenv virtualenv-init -)"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/atomic.omp.json)"
+export PATH="$HOME/gitCode:$PATH"
+export CDPATH=".:$HOME/gitCode:$HOME"
