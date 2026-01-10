@@ -4,11 +4,11 @@ Easily install scripts to `~/bin` and make them executable.
 
 ## Structure
 ```
-script-manager/
-├── install-script.sh       # Install single script
-├── install-all.sh          # Install all scripts in scripts/
-├── scripts/                # Put your scripts here
-│   └── example.sh
+scripts/
+├── install_script.sh       # Install single script
+├── install_all.sh          # Install all scripts in scripts/
+├── specific_scripts/                # Put your scripts here
+│   └── specific_script.sh
 └── README.md
 ```
 
@@ -17,32 +17,15 @@ script-manager/
 ### Install Single Script
 ```bash
 # Install with original name (minus .sh)
-./install-script.sh scripts/my-script.sh
+./install_script.sh specific_scripts/specific_script.sh
 
 # Install with custom name
-./install-script.sh scripts/my-script.sh custom-name
+./install_script.sh specific_scripts/specific_script.sh custom-name
 ```
 
 ### Install All Scripts
 ```bash
-./install-all.sh
-```
-
-### Add New Script
-
-1. Create your script in `scripts/` folder:
-```bash
-   nano scripts/my-new-script.sh
-```
-
-2. Install it:
-```bash
-   ./install-script.sh scripts/my-new-script.sh
-```
-
-3. Use it:
-```bash
-   my-new-script
+./install_all.sh
 ```
 
 ## Examples
@@ -57,14 +40,14 @@ Then use:
 obsidian-fullscreen
 ```
 
-### Install Textbook Opener
+### Install Textbook Search By Name
 ```bash
-./install-script.sh ../Obsidian/textbook-opener/search_textbooks_by_name.sh textbook
+./install-script.sh ../Obsidian/search_textbooks_by_name/search_textbooks_by_name.sh textbook
 ```
 
 ## Notes
 
 - Scripts are copied to `~/bin`
 - Made executable automatically
-- Original files remain in `scripts/` folder
+- Original files remain in the `scripts/` folder
 - Ensure `~/bin` is in your PATH
