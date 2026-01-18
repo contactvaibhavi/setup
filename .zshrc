@@ -196,3 +196,5 @@ alias CRM_log='open "obsidian://open?vault=Obsidian&file=Networking/CRM%20Log"'
 alias my_website='open "obsidian://open?vault=Obsidian&file=Networking/My%20Website"'
 alias invites='open "obsidian://open?vault=Obsidian&file=Networking/Invites"'
 alias CFPs='open "obsidian://open?vault=Obsidian&file=Networking/CFPs/CFP%20Tracker%20Log"'
+export RESUME_DIR="/Users/vaibhavisingh/Documents/Resume/Search"
+export CDPATH=".:/Users/vaibhavisingh/gitCode:.:/Users/vaibhavisingh/Library/Mobile Documents/iCloud~md~obsidian/Documents:/Users/vaibhavisingh"
