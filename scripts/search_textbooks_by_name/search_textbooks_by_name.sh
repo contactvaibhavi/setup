@@ -1,8 +1,6 @@
 #!/bin/bash
-
 # Textbook PDF Opener
 # Opens PDFs from textbooks directory with fuzzy search
-
 TEXTBOOKS_DIR="/Users/vaibhavisingh/Documents/Textbooks"
 
 # Main function
@@ -32,6 +30,7 @@ textbook() {
             ;;
         1)
             echo "📖 Opening: $(basename "${results[0]}")"
+            echo "📁 Path: ${results[0]}"
             open -a Preview "${results[0]}"
             ;;
         *)
@@ -47,6 +46,7 @@ textbook() {
             if [[ "$selection" =~ ^[0-9]+$ ]] && [ "$selection" -ge 1 ] && [ "$selection" -le "${#results[@]}" ]; then
                 local selected="${results[$((selection-1))]}"
                 echo "📖 Opening: $(basename "$selected")"
+                echo "📁 Path: $selected"
                 open -a Preview "$selected"
             else
                 echo "Invalid selection"
